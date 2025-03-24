@@ -15,7 +15,7 @@ public class SampleControler {
     public String platformName(@TQLContext UserContext ctx){
         return Q.platforms()
                 .rawSql("select 1 as id, to_char(1+1, '9') as name")
-                .selectName("concat(name,'-加入后缀')")
+                .selectName("concat(name,'-add-a-suffix')")
                 .execute(ctx).getName();
     }
     @GetMapping(value = "/platform/", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -23,7 +23,7 @@ public class SampleControler {
     public Platform platform(@TQLContext UserContext ctx){
         return Q.platforms()
                 //.rawSql("select 1 as id, to_char(1+1, '9') as name")
-                .selectName("concat(name,'-加入后缀')")
+                .selectName("concat(name,'--add-a-suffix')")
                 .execute(ctx);
     }
 }
