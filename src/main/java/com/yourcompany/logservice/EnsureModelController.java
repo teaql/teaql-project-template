@@ -17,7 +17,8 @@ public class EnsureModelController {
     @GetMapping(value = "/contextInfo/", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody
     public String contextInfo(@TQLContext UserContext ctx){
-        return "You are from ip: "+ ctx.getClientIp() +", you are from local? " + ctx.isFromLocalhost() ;
+        return "your ip: "+ ctx.getClientIp() +"\n" +
+                "from local: " + ctx.isFromLocalhost() ;
     }
 
 

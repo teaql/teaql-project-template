@@ -7,7 +7,7 @@ public class CustomUserContext extends UserContext {
 
     @Override
     public void init(Object request) {
-        this.info("inited");
+        //this.info("inited");
         super.init(request);
     }
 
