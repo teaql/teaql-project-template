@@ -19,9 +19,8 @@ repositories {
     }
     mavenCentral()
 }
-
-println libversion
-
+//targetlib="com.yourcompany:logservice-core:"+libversion
+println "The project is using com.yourcompany:logservice-core:"+libversion
 
 bootJar {
     destinationDirectory = file('target/deploy')
