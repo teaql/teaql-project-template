@@ -6,6 +6,11 @@
 Add the following file: src/resources/application.properties for external resource like redis and database
 
 ```
+spring.application.name=log-service
+server.port=9987
+spring.datasource.type=com.zaxxer.hikari.HikariDataSource
+teaql.ensureTable=true
+teaql.contextClass=com.yourcompany.logservice.CustomUserContext
 spring.datasource.driver-class-name=org.postgresql.Driver
 spring.datasource.url=jdbc:postgresql://<your-database-host>:<your-database-port>:/<your-database-schema>
 spring.datasource.username=<your-database-username>
