@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.0'
+    id 'io.spring.dependency-management' version '1.1.0'
+    id 'maven-publish'
+}
+
+
+group = 'com.yourcompany'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+
+repositories {
+    mavenLocal()
+    maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+    maven{
+        url = uri("https://nexus.teaql.io/repository/maven-releases/")
+    }
+    mavenCentral()
+}
+
+println libversion
+
+
+bootJar {
+    destinationDirectory = file('target/deploy')
+    // If you need to include 'org.springframework.cloud:spring-cloud-function-adapter-gcp' specifically for the bootJar
+    // It's typically managed by declaring it in the dependencies block
+}
+
+dependencies {
+    implementation 'com.zaxxer:HikariCP'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.postgresql:postgresql'
+    implementation 'org.springframework:spring-tx'
+    implementation "com.yourcompany:logservice-core:$libversion"
+
+}

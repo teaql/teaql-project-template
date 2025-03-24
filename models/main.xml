@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><root alias_model_name="logservice" cfg_mask_china_mobile="false" chinese_name="日志平台" english_name="Log Management" name="logservice" org="yourcompany" version="18">
+
+    <!-- 平台 -->
+    <platform _features_delta="laboratory_function" create_time="createTime()" last_update_time="updateTime()" name="日志平台"/>
+
+    <service_request _ui-hidden="true" _ui-type="text" _ui_no-candidate="true" action_type="request_type()" name="an?" snapshot="jsonMe()"/>
+
+    <request_type _constant="true" _identifier="code" code="string(scenarioCode)" entrance_view="string(entranceView)" id="id()" name="xxx" platform="platform()">
+        <_value code="CREATE_TASK" entrance_view="create_task" id="1" name="确认任务"/>
+
+    </request_type>
+
+    <create_task _name="生成任务并确认预检合格" _ui_action="确认:submitConfirm,取消:submitCancel" _viewObject="true" batch_number="批次号:xxx" service_request="service_request()"/>
+
+</root>
