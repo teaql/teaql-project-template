@@ -3,7 +3,8 @@
 ## 
 
 
-Modify the following file: src/resources/application.properties
+Add the following file: src/resources/application.properties for external resource like redis and database
+
 ```
 spring.datasource.driver-class-name=org.postgresql.Driver
 spring.datasource.url=jdbc:postgresql://<your-database-host>:<your-database-port>:/<your-database-schema>
