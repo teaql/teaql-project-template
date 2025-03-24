@@ -3,7 +3,7 @@
 ## 
 
 
-Add the following file: src/java/resources/application.properties for external resource like redis and database
+Add the following file: src/main/resources/application.properties for external resource like redis and database
 
 ```
 spring.application.name=log-service
